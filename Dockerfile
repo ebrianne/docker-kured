@@ -1,4 +1,5 @@
 FROM golang:alpine3.13 as build
+
 ARG TARGETOS
 ARG TARGETARCH
 ARG KURED_RELEASE
