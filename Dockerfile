@@ -16,7 +16,7 @@ RUN if [ -z ${KURED_RELEASE+x} ]; then \
     GO111MODULE=on go mod vendor && \
     CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -ldflags "-s -w -X main.version=${KURED_RELEASE}" -o /tmp/kured ./cmd/kured/*.go
 
-FROM alpine:3.15
+FROM alpine:3.16
 LABEL name="kured"
 
 ENV TZ="Europe/Berlin"
